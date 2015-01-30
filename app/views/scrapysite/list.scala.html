@@ -1,0 +1,11 @@
+@(scrapySites: List[ScrapySite])(implicit lang: Lang)
+
+@main(Messages("applications.name")) {
+    <dl class="scrapySites">
+        @for(scrapySite <- scrapySites){
+            <dt>@scrapySite._id</dt>
+            <dt>@scrapySite.name</dt>
+            <dt>@scrapySite.date</dt>
+        }
+    </dl>
+}
